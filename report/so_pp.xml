@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+        <report
+            id="so_pp"
+            model="sale.order"
+            string="SO Prima Print"
+            report_type="qweb-pdf"
+            name="so_report.qweb_so_pp"
+            file="so_report.qweb_so_pp"
+            attachment_use="True"
+            attachment="(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)"
+    />
+    
+</odoo> 
